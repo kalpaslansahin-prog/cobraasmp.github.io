@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Başvuru - CobraaSMP</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        form { max-width: 600px; margin: 0 auto; }
-        label { display: block; margin-top: 10px; }
-        input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
-        button { margin-top: 20px; padding: 10px; background: green; color: white; border: none; cursor: pointer; }
-    </style>
+    <title>CobraSMP - Başvuru Formu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Başvuru</h1>
-        <p>Sunucumuza katılmak için başvurunuzu yapın.</p>
-        <a href="index.html">Ana Sayfa</a>
-    </header>
-    <form action="#" method="post" onsubmit="alert('Başvurunuz gönderildi! Teşekkür ederiz.'); return false;">
-        <label for="name">İsim:</label>
-        <input type="text" id="name" name="name" required>
+<body class="form-body">
 
-        <label for="age">Yaş:</label>
-        <input type="number" id="age" name="age" required>
+    <div class="form-container">
+        <h2>🐍 CobraSMP Başvuru Formu</h2>
+        <p>Lütfen ilgili konuyu seçip detaylıca doldur.</p>
 
-        <label for="minecraft_username">Minecraft Kullanıcı Adı:</label>
-        <input type="text" id="minecraft_username" name="minecraft_username" required>
+        <form id="basvuruForm" onsubmit="formGonder(event)">
+            
+            <div class="input-group">
+                <label for="username">Minecraft Kullanıcı Adın (IGN):</label>
+                <input type="text" id="username" placeholder="Örn: OPRS666" required>
+            </div>
 
-        <label for="experience">Deneyim:</label>
-        <textarea id="experience" name="experience" rows="3" placeholder="Minecraft deneyiminizi anlatın"></textarea>
+            <div class="input-group">
+                <label for="discord">Discord Kullanıcı Adın:</label>
+                <input type="text" id="discord" placeholder="Örn: kullanici#0000" required>
+            </div>
 
-        <label for="reason">Neden katılmak istiyorsunuz?</label>
-        <textarea id="reason" name="reason" rows="3" required></textarea>
+            <!-- Konu / Kategori Seçimi -->
+            <div class="input-group">
+                <label for="konu">Başvuru Konusu / Kategorisi:</label>
+                <select id="konu" required>
+                    <option value="" disabled selected>-- Lütfen Konu Seçin --</option>
+                    <option value="Yetkili Başvurusu">🛡️ Yetkili / Kadro Başvurusu</option>
+                    <option value="Eşya Yardımı">📦 Eşya Yardımı & Kayıp Talebi</option>
+                    <option value="Oyuncu Şikayeti">🚨 Oyuncu / Şikayet Bildirimi</option>
+                    <option value="Bug Bildirimi">🐛 Bug / Hata Bildirimi</option>
+                    <option value="Genel Öneri">💡 Genel Öneri & Soru</option>
+                </select>
+            </div>
 
-        <button type="submit">Başvur</button>
-    </form>
+            <div class="input-group">
+                <label for="mesaj">Açıklama / Detay:</label>
+                <textarea id="mesaj" rows="5" placeholder="Talebini detaylıca açıkla..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Başvuruyu Gönder</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
