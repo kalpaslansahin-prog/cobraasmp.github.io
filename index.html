@@ -3,27 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CobraaSMP - Minecraft Sunucusu</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        header { text-align: center; }
-        nav { margin: 20px 0; }
-        nav a { margin: 0 10px; text-decoration: none; color: blue; }
-    </style>
+    <title>CobraSMP - Minecraft Sunucusu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Üst Menü -->
     <header>
-        <h1>CobraaSMP</h1>
-        <p>Türkiye'nin En Gelişmiş Minecraft BoxPVP ve Survival Sunucusu!</p>
-        <p>Maceraya katılmak için: <strong>CobraaSMP.aternos.me</strong></p>
+        <div class="logo">🐍 Cobra<span>SMP</span></div>
+        <nav>
+            <a href="index.html" class="active">Ana Sayfa</a>
+            <a href="#ozellikler">Özellikler</a>
+            <a href="#kurallar">Kurallar</a>
+            <a href="basvuru.html" target="_blank" class="btn-head">Başvuru Yap ↗</a>
+        </nav>
     </header>
-    <nav>
-        <button onclick="window.location.href='destek.html'" style="padding: 10px 20px; margin: 0 10px; background: blue; color: white; border: none; cursor: pointer;">Destek</button>
-        <button onclick="window.location.href='basvuru.html'" style="padding: 10px 20px; margin: 0 10px; background: green; color: white; border: none; cursor: pointer;">Başvuru Yap</button>
-    </nav>
-    <section>
-        <h2>Hakkımızda</h2>
-        <p>CobraaSMP, oyunculara eğlenceli bir Minecraft deneyimi sunan bir sunucudur. BoxPVP ve Survival modlarında oynayabilirsiniz.</p>
+
+    <!-- Karşılama Ekranı -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>CobraSMP Macerasına Katıl!</h1>
+            <p>Eğlenceli survival deneyimi, aktif topluluk ve özel sistemler seni bekliyor.</p>
+            
+            <div class="ip-box" onclick="copyIP()">
+                <span id="server-ip">CobraaSMP.aternos.me</span>
+                <button class="btn-copy">IP Kopyala</button>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="basvuru.html" target="_blank" class="btn-primary">Başvuru Formu (Ayrı Sekme) ↗</a>
+            </div>
+        </div>
     </section>
+
+    <!-- Özellikler -->
+    <section id="ozellikler" class="container">
+        <h2>Sunucu Özellikleri</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>⚔️ Özel Sistemler</h3>
+                <p>Gelişmiş Skript ve eklentilerle hazırlanmış adil ve eğlenceli survival mekanikleri.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Aktif Kadro</h3>
+                <p>Oyuncuların sorunlarını hızlıca çözen ilgili yetkili ekibi.</p>
+            </div>
+            <div class="card">
+                <h3>🏆 Etkinlikler</h3>
+                <p>Düzenli çekilişler, yarışmalar ve haftalık sunucu içi özel etkinlikler.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CobraSMP - Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
