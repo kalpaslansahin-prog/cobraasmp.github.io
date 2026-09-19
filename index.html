@@ -1,102 +1,41 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CobraSMP - Resmi Web Sitesi</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CobraaSMP - Official Web Site</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #00ff88;
+            font-size: 48px;
+        }
+        p {
+            font-size: 20px;
+            color: #cccccc;
+        }
+        .ip-box {
+            background-color: #1e1e1e;
+            border: 2px solid #ffaa00;
+            padding: 15px;
+            display: inline-block;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffaa00;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Navigasyon Çubuğu -->
-  <nav class="navbar">
-    <div class="logo">🐍 CobraSMP</div>
-    <ul class="nav-links">
-      <li><a href="#" onclick="showSection('home')">Ana Sayfa</a></li>
-      <li><a href="#" onclick="showSection('basvuru')">Başvuru Yap</a></li>
-      <li><a href="#" onclick="showSection('destek')">Destek</a></li>
-    </ul>
-    
-    <!-- Sağ Üst Profil Menüsü -->
-    <div class="profile-dropdown">
-      <button class="profile-btn" onclick="toggleProfile()"><i class="fas fa-user-circle"></i> Profil</button>
-      <div class="dropdown-content" id="profileMenu">
-        <a href="#" onclick="showSection('basvuru')"><i class="fas fa-file-signature"></i> Yardımcı Başvurusu</a>
-        <a href="#" onclick="showSection('destek')"><i class="fas fa-headset"></i> Destek Talebi Aç</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    
-    <!-- Ana Sayfa Bölümü -->
-    <section id="home" class="content-section active">
-      <h1>CobraSMP Sunucusuna Hoş Geldiniz!</h1>
-      <p>Aşağıdaki IP adresi ile sunucumuza hemen katılabilirsiniz:</p>
-      <div class="ip-box">
-        <span id="serverIp">CobraaSMP.aternos.me</span>
-        <button onclick="copyIp()"><i class="fas fa-copy"></i> IP Kopyala</button>
-      </div>
-    </section>
-
-    <!-- Başvuru Yap Bölümü -->
-    <section id="basvuru" class="content-section">
-      <h2><i class="fas fa-user-shield"></i> Yetkili & Yardımcı Başvurusu</h2>
-      <form class="form-container" onsubmit="event.preventDefault(); alert('Başvurunuz başarıyla alındı!');">
-        <label>Minecraft Kullanıcı Adınız:</label>
-        <input type="text" placeholder="Örn: OPRS666" required>
-
-        <label>Discord Adresiniz:</label>
-        <input type="text" placeholder="Örn: kullanıcı#0000" required>
-
-        <label>Hangi Dünyada / Modda Görev Yapmak İstersiniz?</label>
-        <select required>
-          <option value="">Seçiniz...</option>
-          <option value="towny">Towny Sunucusu</option>
-          <option value="lobi">Genel Lobi / SMP</option>
-        </select>
-
-        <label>Başvurmak İstediğiniz Yetki:</label>
-        <select required>
-          <option value="">Seçiniz...</option>
-          <option value="rehber">Rehber / Yardımcı</option>
-          <option value="mimar">Mimar (Builder)</option>
-          <option value="mod">Moderatör</option>
-        </select>
-
-        <label>Neden Seni Seçmeliyiz? (Tecrübelerin):</label>
-        <textarea rows="4" placeholder="Kendinizden ve tecrübelerinizden bahsedin..." required></textarea>
-
-        <button type="submit" class="submit-btn">Başvuruyu Gönder</button>
-      </form>
-    </section>
-
-    <!-- Destek Oluştur Bölümü -->
-    <section id="destek" class="content-section">
-      <h2><i class="fas fa-life-ring"></i> Destek Talebi Oluştur</h2>
-      <form class="form-container" onsubmit="event.preventDefault(); alert('Destek talebiniz oluşturuldu! Yetkililer ilgilenecektir.');">
-        <label>Minecraft Kullanıcı Adınız:</label>
-        <input type="text" placeholder="Örn: Nuri" required>
-
-        <label>Destek Konusu:</label>
-        <select required>
-          <option value="">Konu Seçiniz...</option>
-          <option value="calinma">Hesabım Çalındı / Şifre Sorunu</option>
-          <option value="sikayet">Oyuncu Şikayeti / Hile</option>
-          <option value="bug">Hata / Bug Bildirimi</option>
-          <option value="diger">Diğer Sorular</option>
-        </select>
-
-        <label>Sorununuzu / Detayları Açıklayın:</label>
-        <textarea rows="5" placeholder="Lütfen yaşadığınız durumu detaylıca yazın (Çalınma durumunda kanıt ekleyebilirsiniz)..." required></textarea>
-
-        <button type="submit" class="submit-btn btn-danger">Talebi Gönder</button>
-      </form>
-    </section>
-
-  </div>
-
-  <script src="script.js"></script>
+    <h1>🐍 CobraaSMP Minecraft Sunucusu 🐍</h1>
+    <p>En eğlenceli Survival ve Towny macerasına katılmak için sunucu adresimiz:</p>
+    <div class="ip-box">IP: cobraasmp.aternos.me</div>
 </body>
 </html>
