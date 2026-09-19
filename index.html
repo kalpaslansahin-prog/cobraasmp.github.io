@@ -3,39 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CobraaSMP - Official Web Site</title>
+    <title>CobraaSMP - Resmi Web Sitesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            background-color: #121212;
+            background-color: #0f0f13;
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
         }
-        h1 {
-            color: #00ff88;
-            font-size: 48px;
+
+        .container {
+            background: #181820;
+            border: 2px solid #2a2a38;
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        p {
-            font-size: 20px;
-            color: #cccccc;
-        }
-        .ip-box {
-            background-color: #1e1e1e;
-            border: 2px solid #ffaa00;
-            padding: 15px;
-            display: inline-block;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 22px;
-            font-weight: bold;
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
             color: #ffaa00;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 170, 0, 0.4);
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .ip-box {
+            background: #111116;
+            border: 2px dashed #00ff88;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #00ff88;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .ip-box:hover {
+            background: #00ff88;
+            color: #111116;
+            transform: scale(1.03);
+        }
+
+        .worlds {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .world-card {
+            background: #22222e;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border-left: 4px solid #ffaa00;
+            font-weight: bold;
+        }
+
+        .footer {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #00bfff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <h1>🐍 CobraaSMP Minecraft Sunucusu 🐍</h1>
-    <p>En eğlenceli Survival ve Towny macerasına katılmak için sunucu adresimiz:</p>
-    <div class="ip-box">IP: cobraasmp.aternos.me</div>
+
+    <div class="container">
+        <div class="logo">🐍 CobraaSMP</div>
+        <div class="subtitle">En Eğlenceli Survival ve Towny Macerasına Katıl!</div>
+
+        <div class="ip-box" onclick="copyIP()">
+            <i class="fa-solid fa-server"></i> IP: cobraasmp.aternos.me
+        </div>
+        <p style="font-size: 0.85rem; color: #888; margin-top: -15px; margin-bottom: 25px;">(Tıklayarak IP'yi kopyalayabilirsin)</p>
+
+        <div class="worlds">
+            <div class="world-card" style="border-color: #ff5555;">⚔️ CobraaSMP</div>
+            <div class="world-card" style="border-color: #ffaa00;">🏰 CobraaTowny</div>
+            <div class="world-card" style="border-color: #55ffff;">🌐 Lobi</div>
+        </div>
+
+        <div class="footer">
+            © 2026 CobraaSMP | Tüm Hakları Saklıdır.<br>
+            <a href="https://cobraasmp.github.io">cobraasmp.github.io</a>
+        </div>
+    </div>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("cobraasmp.aternos.me");
+            alert("Sunucu IP adresi kopyalandı: cobraasmp.aternos.me");
+        }
+    </script>
+
 </body>
 </html>
